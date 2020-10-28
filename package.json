@@ -7,13 +7,6 @@
     "node": "12.19.0",
     "npm": "6.14.8"
   },
-  "scripts": {
-    "watch": "nodemon",
-    "start": "node index.js",
-    "heroku-postbuild": "cd my-app && npm install && npm run build"
-  },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
@@ -22,5 +15,12 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
-  }
+  },
+  "scripts": {
+    "watch": "nodemon",
+    "start": "node index.js",
+    "heroku-postbuild": "cd my-app && npm install && npm run build"
+  },
+  "author": "",
+  "license": "ISC"
 }
