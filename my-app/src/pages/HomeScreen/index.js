@@ -29,11 +29,9 @@ export function HomeScreen({
                 <p>
                     welcome!
                 </p>
-                <div onClick={() => {
-                    console.log("game begins")
-                }}>
-                    <img src={play}/>
-                </div>
+                <img src={play} onClick={() => {
+                    setScreenNav('gamemode')
+                }}/>
                 
                 <Fragment>
                     <div className="container">

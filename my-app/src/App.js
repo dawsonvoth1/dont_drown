@@ -5,6 +5,9 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 import { HomeScreen } from './pages/HomeScreen';
 import { SettingsScreen } from './pages/SettingsScreen';
+import { GameModeScreen } from './pages/GameModeScreen';
+import { PlayersScreen } from './pages/PlayersScreen';
+import { GameScreen } from './pages/GameScreen';
 
 export const router = React.createRef()
 
@@ -12,13 +15,20 @@ function App() {
 
   // declare initial screen to view and app navigator
   const [screenNav, setScreenNav] = useState('home');
+  const [params, setParams] = useState(null);
 
   // return the screen to display based on value held by screenNav
   const getView = () => {
-    if (screenNav === 'home'){
-      return <HomeScreen setScreenNav={setScreenNav}/>
-    }else if (screenNav === 'settings'){
-      return <SettingsScreen setScreenNav={setScreenNav}/>
+    switch(screenNav) {
+      case 'settings':
+        return <SettingsScreen setScreenNav={setScreenNav}/>
+      case 'players':
+        return <PlayersScreen setScreenNav={setScreenNav} params={params} setParams={setParams}/>
+      case 'game':
+        return <GameScreen setScreenNav={setScreenNav} params={params} setParams={setParams}/>
+      case 'gamemode':
+        return <GameModeScreen setScreenNav={setScreenNav} params={params} setParams={setParams}/>
+      default: return <HomeScreen setScreenNav={setScreenNav}/>
     }
   }
 
@@ -34,18 +44,5 @@ function App() {
 	);
 }
 
-// import AddPlayer from "./pages/HomeScreen/AddPlayer";
-
-// function App() {
-//   return (
-//     <Fragment>
-//       <body>
-//         <div className="container">
-//           <AddPlayer />
-//         </div>
-//       </body>
-//     </Fragment>
-//   );
-// }
 
 export default App;

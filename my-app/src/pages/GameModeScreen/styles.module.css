@@ -1,0 +1,133 @@
+.center {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+    font-size: 750%;
+    font-family: monospace;
+    color: white;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #B3CF54;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #118C83;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px white;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+.slider.round {
+    border-radius: 60px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+body {
+    background-color: #063956;
+}
+
+.buttonA {
+    border: none;
+    color: white;
+    padding: 35px 85px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 48px;
+    margin: 25px;
+    cursor: pointer;
+}
+.buttonB {
+    border: none;
+    color: white;
+    padding: 35px 85px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 48px;
+    margin: 25px;
+    cursor: pointer;
+}
+.buttonC {
+    border: none;
+    color: white;
+    padding: 35px 85px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 48px;
+    margin: 25px 300px;
+    cursor: pointer;
+}
+.buttonD {
+    border: none;
+    color: white;
+    padding: 35px 85px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 48px;
+    margin: 25px;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: #4CAF50;
+    border-radius: 50%;
+}
+
+.center {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+
+.adultBtn {
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    background-color: #B3CF54;
+}
